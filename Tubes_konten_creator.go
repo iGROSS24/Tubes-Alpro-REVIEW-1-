@@ -159,6 +159,7 @@ func tampilkanSemua(A tabKonten, N int) {
 	}
 }
 
+//untuk mencari konten menggunakan sequential search
 func cariKontenSeq(A tabKonten, N int) {
 	var input string
 	var i int
@@ -180,7 +181,7 @@ func cariKontenSeq(A tabKonten, N int) {
 	}
 }
 
-// Mencari konten nya berdasarkan judul yang sudah teurut
+// Mencari konten menggunakan binary search nya berdasarkan judul yang sudah teurut
 func cariKontenBin(A tabKonten, N int) {
 	var input string
 	fmt.Scan(&input)
@@ -212,6 +213,7 @@ func cariKontenBin(A tabKonten, N int) {
 	}
 }
 
+//prosedure data konten nya terurut, supaya binaryy search berjalan
 func selectionSortJudul(A *tabKonten, N int) {
 	var i, j, min int
 	var temp ideKonten
@@ -228,6 +230,7 @@ func selectionSortJudul(A *tabKonten, N int) {
 	}
 }
 
+//untuk mengurutkan daftar konten berdasarkan tanggal
 func selectionSortTgl(A *tabKonten, N int) {
 	var i, j, min int
 	var temp ideKonten
@@ -245,6 +248,7 @@ func selectionSortTgl(A *tabKonten, N int) {
 	fmt.Println("Data sudah diurutkan menurut tanggal.")
 }
 
+//untuk mengurutkan daftar konten berdasrkan tingkat engagement
 func insertSortEngagement(A *tabKonten, N int) {
 	var i, j int
 	var temp ideKonten
@@ -260,6 +264,7 @@ func insertSortEngagement(A *tabKonten, N int) {
 	fmt.Println("Data sudah diurutkan menurut engagement.")
 }
 
+//menghitung total dan mengembalika nilai engagement totalnya
 func totalEngagement(egg ideKonten) int {
 	return egg.like + egg.komentar + egg.share
 }
